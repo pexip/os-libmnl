@@ -1,7 +1,8 @@
 Source: libmnl
 Priority: important
-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
-Uploaders: Neutron Soutmun <neutrons@debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+XSBC-Pexip-Original-Uploaders: Neutron Soutmun <neutrons@debian.org>
 Build-Depends:
  autotools-dev,
  debhelper (>= 9~),
@@ -13,6 +14,7 @@ Section: libs
 Homepage: http://netfilter.org/projects/libmnl/
 Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/libmnl.git
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/libmnl.git
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: libmnl-dev
 Section: libdevel
