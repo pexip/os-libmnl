@@ -14,7 +14,7 @@ Section: libs
 Homepage: http://netfilter.org/projects/libmnl/
 Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/libmnl.git
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/libmnl.git
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
 
 Package: libmnl-dev
 Section: libdevel
