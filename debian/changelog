@@ -1,3 +1,31 @@
+libmnl (1.0.4-3) unstable; urgency=medium
+
+  [ Arturo Borrero Gonzalez ]
+  * [e542e5f] src:libmnl: reallocate to pkg-netfilter packaging team (and salsa)
+    (Closes: #925099)
+
+  [ Alberto Molina Coballes ]
+  * [fc7598a] d/control: mark libmnl-dev as Multi-Arch: same (Closes: #942329)
+
+  [ Debian Janitor ]
+  * [b91f74f] Trim trailing whitespace.
+  * [392bb25] Use secure copyright file specification URI.
+  * [01df844] Drop custom source compression.
+  * [1183b8e] Use secure URI in Homepage field.
+  * [b2a05fb] Bump debhelper from old 9 to 10.
+  * [2a532d8] Drop unnecessary dependency on dh-autoreconf.
+  * [1e14bfb] Use canonical URL in Vcs-Git.
+  * [5f69001] Fix day-of-week for changelog entry 1.0.3-2.
+
+  [ Arturo Borrero Gonzalez ]
+  * [c79e0db] d/: add salsa gitlab integration
+  * [3526970] src:libmnl: drop dh-exec build-dep
+  * [80e16a6] src:libmnl: bump std-version to 4.5.0
+  * [7e80c86] src:libmnl: bump debhelper-compat to 12 and refresh build-deps
+  * [825c810] src:libmnl: downgrade the priority of the package
+
+ -- Arturo Borrero Gonzalez <arturo@debian.org>  Tue, 14 Apr 2020 12:09:01 +0200
+
 libmnl (1.0.4-2pexip2) pexip; urgency=medium
 
   * Rebuild in buster environment
@@ -124,13 +152,13 @@ libmnl (1.0.3-2) unstable; urgency=low
     * debian/control:
       - Update long description with extended description which explains
         what is in each package.
-  * Update copyright format url to version 1.0 
+  * Update copyright format url to version 1.0
 
   [ Anibal Monsalve Salazar ]
   * New co-maintainer: Neutron Soutmun
   * Dm-Upload-Allowed: yes
 
- -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 31 May 2012 09:17:38 +1000
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 31 May 2012 09:17:38 +1000
 
 libmnl (1.0.3-1) unstable; urgency=low
 

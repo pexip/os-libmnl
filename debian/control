@@ -1,24 +1,22 @@
 Source: libmnl
 Priority: important
 Maintainer: Pexip AS <packaging@pexip.com>
-XSBC-Pexip-Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
-XSBC-Pexip-Original-Uploaders: Neutron Soutmun <neutrons@debian.org>
-Build-Depends:
- autotools-dev,
- debhelper (>= 9~),
- dh-autoreconf,
- dh-exec,
- dpkg-dev (>= 1.16.1~)
-Standards-Version: 3.9.8
+Priority: optional
+XSBC-Pexip-Original-Maintainer: Debian Netfilter Packaging Team <pkg-netfilter-team@lists.alioth.debian.org>
+XSBC-Pexip-Original-Uploaders: Neutron Soutmun <neutrons@debian.org>,
+           Arturo Borrero Gonzalez <arturo@debian.org>
+Build-Depends: debhelper-compat (= 12), libtool, pkg-config
+Standards-Version: 4.5.0
 Section: libs
-Homepage: http://netfilter.org/projects/libmnl/
-Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/libmnl.git
-Vcs-Git: https://anonscm.debian.org/git/collab-maint/libmnl.git
+Homepage: https://netfilter.org/projects/libmnl/
+Vcs-Git: https://salsa.debian.org/pkg-netfilter-team/pkg-libmnl.git
+Vcs-Browser: https://salsa.debian.org/pkg-netfilter-team/pkg-libmnl
 XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: libmnl-dev
 Section: libdevel
 Architecture: linux-any
+Multi-arch: same
 Depends: libmnl0 (= ${binary:Version}), ${misc:Depends}
 Description: minimalistic Netlink communication library (devel)
  libmnl is a minimalistic user-space library oriented to Netlink developers.
