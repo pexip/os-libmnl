@@ -1,5 +1,4 @@
 Source: libmnl
-Priority: important
 Maintainer: Pexip AS <packaging@pexip.com>
 Priority: optional
 XSBC-Pexip-Original-Maintainer: Debian Netfilter Packaging Team <pkg-netfilter-team@lists.alioth.debian.org>
