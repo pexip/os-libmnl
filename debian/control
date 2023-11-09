@@ -10,7 +10,7 @@ Section: libs
 Homepage: https://netfilter.org/projects/libmnl/
 Vcs-Git: https://salsa.debian.org/pkg-netfilter-team/pkg-libmnl.git
 Vcs-Browser: https://salsa.debian.org/pkg-netfilter-team/pkg-libmnl
-XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: libmnl-dev
 Section: libdevel
