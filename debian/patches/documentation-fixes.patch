@@ -1,0 +1,78 @@
+Description: Correct some non-native English usages
+Author: Jeremy Sowden <jeremy@azazel.net>
+Last-Update: 2022-12-23
+Forwarded: https://lore.kernel.org/netfilter-devel/20221223215621.2940577-1-jeremy@azazel.net/
+
+--- a/src/attr.c
++++ b/src/attr.c
+@@ -115,7 +115,7 @@ EXPORT_SYMBOL struct nlattr *mnl_attr_next(const struct nlattr *attr)
+  * \param attr pointer to attribute to be checked
+  * \param max maximum attribute type
+  *
+- * This function allows to check if the attribute type is higher than the
++ * This function allows one to check if the attribute type is higher than the
+  * maximum supported type. If the attribute type is invalid, this function
+  * returns -1 and errno is explicitly set. On success, this function returns 1.
+  *
+@@ -222,8 +222,8 @@ EXPORT_SYMBOL int mnl_attr_validate(const struct nlattr *attr, enum mnl_attr_dat
+  * \param type attribute type (see enum mnl_attr_data_type)
+  * \param exp_len expected attribute data size
+  *
+- * This function allows to perform a more accurate validation for attributes
+- * whose size is variable. If the size of the attribute is not what we expect,
++ * This function allows one to perform a more accurate validation for attributes
++ * whose size is variable. If the size of the attribute is not what is expected,
+  * this functions returns -1 and errno is explicitly set.
+  */
+ EXPORT_SYMBOL int mnl_attr_validate2(const struct nlattr *attr,
+@@ -244,8 +244,8 @@ EXPORT_SYMBOL int mnl_attr_validate2(const struct nlattr *attr,
+  * \param cb callback function that is called for each attribute
+  * \param data pointer to data that is passed to the callback function
+  *
+- * This function allows to iterate over the sequence of attributes that compose
+- * the Netlink message. You can then put the attribute in an array as it
++ * This function allows you to iterate over the sequence of attributes that
++ * compose the Netlink message. You can then put the attribute in an array as it
+  * usually happens at this stage or you can use any other data structure (such
+  * as lists or trees).
+  *
+@@ -271,8 +271,8 @@ EXPORT_SYMBOL int mnl_attr_parse(const struct nlmsghdr *nlh,
+  * \param cb callback function that is called for each attribute in the nest
+  * \param data pointer to data passed to the callback function
+  *
+- * This function allows to iterate over the sequence of attributes that compose
+- * the Netlink message. You can then put the attribute in an array as it
++ * This function allows you to iterate over the sequence of attributes that
++ * compose the Netlink message. You can then put the attribute in an array as it
+  * usually happens at this stage or you can use any other data structure (such
+  * as lists or trees).
+  *
+--- a/src/nlmsg.c
++++ b/src/nlmsg.c
+@@ -488,9 +488,9 @@ EXPORT_SYMBOL bool mnl_nlmsg_batch_next(struct mnl_nlmsg_batch *b)
+  * mnl_nlmsg_batch_reset - reset the batch
+  * \param b pointer to batch
+  *
+- * This function allows to reset a batch, so you can reuse it to create a
+- * new one. This function moves the last message which does not fit the
+- * batch to the head of the buffer, if any.
++ * This function allows you to reset a batch, so you can reuse it to create a
++ * new one. This function moves the last message which does not fit the batch to
++ * the head of the buffer, if any.
+  */
+ EXPORT_SYMBOL void mnl_nlmsg_batch_reset(struct mnl_nlmsg_batch *b)
+ {
+--- a/src/socket.c
++++ b/src/socket.c
+@@ -135,7 +135,7 @@ EXPORT_SYMBOL struct mnl_socket *mnl_socket_open(int bus)
+  * \param bus the netlink socket bus ID (see NETLINK_* constants)
+  * \param flags the netlink socket flags (see SOCK_* constants in socket(2))
+  *
+- * This is similar to mnl_socket_open(), but allows to set flags like
++ * This is similar to mnl_socket_open(), but allows one to set flags like
+  * SOCK_CLOEXEC at socket creation time (useful for multi-threaded programs
+  * performing exec calls).
+  *
+-- 
+2.35.1
+

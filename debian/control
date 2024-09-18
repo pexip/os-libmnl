@@ -2,9 +2,12 @@ Source: libmnl
 Priority: optional
 Maintainer: Debian Netfilter Packaging Team <pkg-netfilter-team@lists.alioth.debian.org>
 Uploaders: Neutron Soutmun <neutrons@debian.org>,
-           Arturo Borrero Gonzalez <arturo@debian.org>
-Build-Depends: debhelper-compat (= 12), libtool, pkg-config
-Standards-Version: 4.5.0
+           Arturo Borrero Gonzalez <arturo@debian.org>,
+           Jeremy Sowden <azazel@debian.org>
+Build-Depends: debhelper-compat (= 13), libtool, pkgconf
+Build-Depends-Indep: doxygen <!nodoc>, graphviz <!nodoc>
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
 Section: libs
 Homepage: https://netfilter.org/projects/libmnl/
 Vcs-Git: https://salsa.debian.org/pkg-netfilter-team/pkg-libmnl.git
@@ -13,7 +16,7 @@ Vcs-Browser: https://salsa.debian.org/pkg-netfilter-team/pkg-libmnl
 Package: libmnl-dev
 Section: libdevel
 Architecture: linux-any
-Multi-arch: same
+Multi-Arch: same
 Depends: libmnl0 (= ${binary:Version}), ${misc:Depends}
 Description: minimalistic Netlink communication library (devel)
  libmnl is a minimalistic user-space library oriented to Netlink developers.
@@ -76,3 +79,19 @@ Description: minimalistic Netlink communication library
  .
  This package contains the shared libraries needed to run programs that use
  the minimalistic Netlink communication library.
+
+Package: libmnl-doc
+Section: doc
+Architecture: all
+Build-Profiles: <!nodoc>
+Multi-Arch: foreign
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}
+Description: Documentation files for libmnl0
+ libmnl is a minimalistic user-space library oriented to Netlink developers.
+ There are a lot of common tasks in parsing, validating, constructing of
+ both the Netlink header and TLVs that are repetitive and easy to get wrong.
+ This library aims to provide simple helpers that allows you to re-use code
+ and to avoid re-inventing the wheel.
+ .
+ This package provides man-pages and HTML documentation for the API.

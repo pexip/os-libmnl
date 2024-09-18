@@ -1,3 +1,69 @@
+libmnl (1.0.5-3) unstable; urgency=medium
+
+  * [63fb516] d/.gitignore: add Emacs artefacts
+  * [dc87fce] d/control: update my e-mail address
+  * [e6475e3] d/control: bump Standards-Version to 4.7.0
+  * [d08a2cf] d/rules: set locale to fix man-page reproducibility
+  * [f4671d2] d/control: replace pkg-config dependencies with pkgconf
+  * [5ca6d57] d/gbp.conf: add `[DEFAULT]` section for pristine-tar,
+    debian-branch & upstream-branch
+
+ -- Jeremy Sowden <azazel@debian.org>  Wed, 18 Sep 2024 20:18:11 +0100
+
+libmnl (1.0.5-2) unstable; urgency=medium
+
+  * Re-upload with source only, to unblock the migration policy
+
+ -- Neutron Soutmun <neutrons@debian.org>  Mon, 06 Nov 2023 15:21:59 +0700
+
+libmnl (1.0.5-1) unstable; urgency=medium
+
+  [ Jeremy Sowden ]
+  * [669ecab] New upstream version 1.0.5
+    (closes: #1053156)
+    + Features:
+      - New examples
+      - MNL_SOCKET_DUMP_SIZE define, holding a recommended buffer size for
+        netlink dumps
+    + Fixes:
+      - nfct-daemon example compile error with musl libc
+      - Compiler warning when passing a const 'cb_ctl_array' to mnl_cb_run2()
+      - Typo in rtnl-addr-dump example
+      - Valgrind warnings due to uninitialized padding in netlink messages
+      - Misc fixes in doxygen documentation
+      - Misc build system fixes
+  * [12ac3a4] d/watch: update to v4
+  * [da939fe] d/watch: update URL
+  * [6ed4fbb] d/upstream/signing-key.asc: update to current minimal key
+  * [719eaab] d/control: bump Standards-Version to 4.6.0
+  * [d511ad0] d/control: bump debhelper-compat to 13
+  * [8f0a9b2] d/control: add myself to uploaders
+  * [6622ceb] d/control: add `Rules-Requires-Root: no`
+  * [00f30c6] d/control: correct `Multi-Arch:` capitalization
+  * [195c07d] d/*.install: replace globs with multi-arch variables
+  * [dd3d20a] d/not-installed: ignore libtool archive
+  * [e2a70f2] d/rules, d/libmnl-dev.install: build and install static library
+    (closes: #1010616)
+  * [09b7021] d/rules: remove explicit export of dpkg build flags
+  * [67f8714] d/libmnl0.symbols: add `Build-Depends-Package:` field
+  * [284d1a5] d/libmnl-dev.exmaples: install examples
+  * [e9ba264] d/gbp.conf: buildpackage, import-orig: enable `pristine-tar`
+  * [3921355] d/gbp.conf: dch: set `commit-msg` and `id-length`
+  * [483adb5] d/copyright: update copyright field for debian/*
+  * [9759d67] d/control: bump Standards-Version to 4.6.1
+  * [4f81a46] Add libmnl-doc package containing man-pages and HTML
+    documentation
+  * [7913abf] d/patches: add a patch to fix documentation typo's
+  * [af40972] d/.gitignore: add file to ignore build artefacts
+  * [65cac12] d/control: bump Standards-Version to 4.6.2
+  * [d423c8e] d/control: move -doc build-dep's to `Build-Depends-Indep:`
+  * [2faddb7] d/rules: add support for `<nodoc>` build-profile
+
+  [ Neutron Soutmun ]
+  * [bf14b23] d/gbp.conf: add gbp.conf options
+
+ -- Neutron Soutmun <neutrons@debian.org>  Sat, 04 Nov 2023 14:35:17 +0700
+
 libmnl (1.0.4-3) unstable; urgency=medium
 
   [ Arturo Borrero Gonzalez ]
